@@ -1,0 +1,39 @@
+main h2 {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+main {
+  flex: 1;
+}
+body {
+  background-color: rgb(177, 177, 177) !important;
+  display: flex;
+  flex-direction: column;
+}
+form {
+  padding: 20px;
+}
+html, body{
+    height: 100%;
+}
+.dias,
+.botoes {
+  text-align: center;
+}
+
+.porcentagem90dias,
+.porcentagem60dias,
+.porcentagem15dias {
+  padding: 5px;
+}
+
+footer {
+  padding-right: 15px;
+  text-align: end;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  
+}

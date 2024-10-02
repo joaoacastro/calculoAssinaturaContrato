@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.:calculoAssinaturaContrato:.</title>
+
+    <!-- estilo -->
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- botões -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <h2>Cálculo para Assinatura em Contratos</h2>
+      
+      <form>
+        <div>
+          Valor Total do evento R$<input type="number" id="vlrContrato" />
+          <br />
+          <br />
+          Será cobrado um sinal de:
+          <input type="number" id="porcentagemSinal" min="0" max="100" />% do
+          valor total do evento na assinatura do contrato.
+          <br />
+
+          <div id="vlrSinal""></div>
+        </div>
+        <br />
+        <br />
+        <div class="dias">
+          <div class="porcentagem90dias">
+            <input type="number" id="porcentagem90dias" min="0" max="100" />%
+            até 90 dias antes da entrada do Evento
+            <div id="vlr90dias"></div>
+          </div>
+          <div class="porcentagem60dias">
+            <input type="number" id="porcentagem60dias" min="0" max="100" />%
+            até 60 dias antes da entrada do Evento
+            <div id="vlr60dias"></div>
+          </div>
+          <div class="porcentagem15dias">
+            <input type="number" id="porcentagem15dias" min="0" max="100" />%
+            até 15 dias antes da entrada do Evento
+            <div id="vlr15dias"></div>
+          </div>
+        </div>
+        <br />
+        <br />
+
+        <button onclick="enviar()" type="button" class="btn btn-primary btn-lg btn-block" id="calcular">Calcular</button>
+        <button onclick="window.location.reload()" type="button" class="btn btn-secondary btn-lg btn-block">Limpar</button>
+      </form>
+    </main>
+
+    <footer>
+        ...developed by <a href="https://github.com/joaoacastro" target="_blank">JAC</a>
+    </footer>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
