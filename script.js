@@ -74,12 +74,9 @@ function enviar() {
     );
     window.location.reload();
   }
+  let provaReal = percentualSinal + vlr90 + vlr60 + vlr15;
 
-  let vlrRestante = valorContrato - vlrSinalCalculado;
-  let somaPorcentagensProva = vlr90print + vlr60print + vlr15print;
-  let provaReal = somaPorcentagensProva + vlrRestante;
-
-  if (valorContrato != provaReal){
+  if (provaReal != 100){
     alert("Calcule novamente, o valor das porcentagens não batem com o valor total do evento.")
     window.location.reload();
   }
