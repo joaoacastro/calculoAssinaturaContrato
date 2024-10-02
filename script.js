@@ -74,5 +74,15 @@ function enviar() {
     );
     window.location.reload();
   }
+
+  let vlrRestante = valorContrato - vlrSinalCalculado;
+  let somaPorcentagensProva = vlr90print + vlr60print + vlr15print;
+  let provaReal = somaPorcentagensProva + vlrRestante;
+
+  if (valorContrato != provaReal){
+    alert("Calcule novamente, o valor das porcentagens não batem com o valor total do evento.")
+    window.location.reload();
+  }
+
   document.getElementById("calcular").style.display = "none";
 }
