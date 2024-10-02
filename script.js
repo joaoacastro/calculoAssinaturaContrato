@@ -22,7 +22,8 @@ function enviar() {
     minimumFractionDigits: 2,
   });
 
-  vlrSinal.innerHTML = `Levando em consideração a porcentagem de <strong>${percentualSinal}%</strong> sobre o valor do Contrato de <strong>R$ ${vlrContratoPrint}</strong>, o valor do sinal fica <strong>R$ ${vlrSinalCalculadoPrint}</strong>`;
+  vlrSinal.innerHTML = `<em>Levando em consideração a porcentagem de <strong>${percentualSinal}%</strong> sobre o valor do Contrato de <strong>R$ ${vlrContratoPrint}</strong>, o valor do sinal fica <strong>R$ ${vlrSinalCalculadoPrint}</strong></em>`;
+  document.getElementById("vlrSinal").style.border = "2px solid black";
 
   //calculando 90 dias antes da entrada do evento
   let vlr90 = parseFloat(porcentagem90dias.value);
@@ -49,7 +50,7 @@ function enviar() {
     style: "decimal",
     minimumFractionDigits: 2,
   });
-  vlr15dias.innerHTML = `<strong> R$ ${vlr15calculado}</strong>`;
+  vlr15dias.innerHTML = `<strong> R$ ${vlr15print}</strong>`;
 
   if (valorContrato <= 0) {
     alert("Por favor insira um valor positivo no valor do contrato");

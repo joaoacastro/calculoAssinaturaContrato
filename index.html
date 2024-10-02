@@ -21,24 +21,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
-    <header></header>
+    <header>
+      <h2>Cálculo para Assinatura em Contratos</h2>
+    </header>
 
     <main>
-      <h2>Cálculo para Assinatura em Contratos</h2>
       
       <form>
-        <div>
+        <div class="headerForm">
           Valor Total do evento R$<input type="number" id="vlrContrato" min="0" />
           <br />
           <br />
-          Será cobrado um sinal de:
+          Será cobrado um sinal de
           <input type="number" id="porcentagemSinal" min="0" max="100" />% do
           valor total do evento na assinatura do contrato.
           <br />
+          <br />
 
-          <div id="vlrSinal""></div>
+          <div id="vlrSinal"></div>
+          
         </div>
-        <br />
+
         <br />
         <div class="dias">
           <div class="porcentagem90dias">
@@ -57,7 +60,6 @@
             <div id="vlr15dias"></div>
           </div>
         </div>
-        <br />
         <br />
 
         <button onclick="enviar()" type="button" class="btn btn-primary btn-lg btn-block" id="calcular">Calcular</button>
