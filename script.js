@@ -8,9 +8,8 @@ let vlr90dias = document.getElementById("vlr90dias");
 let vlr60dias = document.getElementById("vlr60dias");
 let vlr15dias = document.getElementById("vlr15dias");
 
-function enviar() {
-  let vlrContratoReplaced = vlrContrato.replace(".",",");
-  let valorContrato = parseFloat(vlrContratoReplaced.value);
+function enviar() {  
+  let valorContrato = parseFloat(vlrContrato.value);
   let vlrContratoPrint = valorContrato.toLocaleString("pt-BR", {
     style: "decimal",
     minimumFractionDigits: 2,
